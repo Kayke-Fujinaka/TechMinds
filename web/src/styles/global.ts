@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./themes";
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: ${theme.fonts.family.primary};
   }
 
   html {
@@ -22,10 +24,6 @@ const GlobalStyle = createGlobalStyle`
   html {
     width: 100%;
     height: 100%;
-  }
-
-  body {
-    font-family: 'Poppins', sans-serif;
   }
 `;
 

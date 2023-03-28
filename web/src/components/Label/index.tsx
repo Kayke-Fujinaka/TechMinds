@@ -1,5 +1,10 @@
+import { LabelHTMLAttributes, ReactNode } from "react";
 import { LabelBase } from "./styles";
 
-export default function Label() {
-  return <LabelBase>Oi</LabelBase>;
+interface ILabel extends LabelHTMLAttributes<HTMLLabelElement> {
+  children: ReactNode;
+}
+
+export default function Label({ children, ...rest }: ILabel) {
+  return <LabelBase>{children}</LabelBase>;
 }

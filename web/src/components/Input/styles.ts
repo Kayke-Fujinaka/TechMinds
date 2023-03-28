@@ -32,7 +32,7 @@ export const InputBase = styled.input`
 `;
 
 export const IconWrapper = styled.div<IIconWrapper>`
-  ${({ position }) => css`
+  ${({ theme, position }) => css`
     position: absolute;
     top: 50%;
     transform: translateY(-40%);
@@ -41,5 +41,6 @@ export const IconWrapper = styled.div<IIconWrapper>`
     z-index: 1;
     box-sizing: border-box;
     right: 0;
+    color: ${theme.colors.primary};
   `}
 `;
